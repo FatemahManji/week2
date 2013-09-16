@@ -1,0 +1,103 @@
+@blue: #000;
+@basefont:24px;
+
+.roundedbutton{
+	border-radius: 10px;
+	background: @blue;
+	color: #fff;
+}
+.fontstyle(@fontcolor){ /* mixer*/
+font-family: "Calisto MT", "Bookman Old Style", Bookman, "Goudy Old Style", Garamond, "Hoefler Text", "Bitstream Charter", Georgia, serif;
+font-size: @basefont;
+color: @fontcolor;
+font-weight: 300;
+text-decoration: underline;
+line-height: 42px;
+}
+
+/*parmetric mixer*/
+.square(@size){
+	width:@size;
+	height:@size;
+}
+
+h1{
+	font-size: @basefont*5;
+}
+
+h2{
+	font-size: @basefont*1.5;
+}
+
+/* you can also use + or - to dd to basefont eg. basefont+3   */
+
+p{
+	font-size: @basefont - 10;
+}
+
+body{
+	font-size: @basefont;
+	.fontstyle(#f1c40f);
+}
+
+
+header{
+	background-color: lighten(@blue, 80%);
+	nav{
+		background-color: #3299BB;
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style-type:none;
+			li{
+				margin-right:15px;
+				display:inline;
+				&:last-child{
+					margin-right:0px;
+				}
+				&:nth-child(2){
+					color:yellow;
+				}
+			}
+		}
+	}
+}
+a{
+	color:#000;
+	&:hover{
+		text-decoration:none;
+		color:red;
+	}
+}
+section{
+	width: 800px;
+	background-color:purple;
+	article{
+		header{
+			width: 400px;
+			background-color: green;
+			h2{
+				font-size: 48px;
+				color: #3299BB;
+			}
+		}
+		p{
+			button[type="submit"]{
+				.roundedbutton;
+				padding:10px; 
+			}
+		}
+	}
+}
+
+
+footer{
+	.mysquare{
+		.square(45px);
+		background-color: black;
+	}
+}
+
+
+
+
